@@ -6,7 +6,7 @@ en row/col counter for hver board
 def get_winner(inverted, board_counters, draws, boards):
     for i, num in enumerate(draws):
         for posting in inverted.get(num, []):
-            board_counters[posting[0]][0][posting[1]] += 1 # i her ikke riktig, ingenting er riktig her
+            board_counters[posting[0]][0][posting[1]] += 1
             board_counters[posting[0]][1][posting[2]] += 1
             if board_counters[posting[0]][0][posting[1]] == 5 or board_counters[posting[0]][1][posting[2]] == 5:
                 unmarked_sum = sum([x for x in boards[posting[0]] if x not in draws[:i+1]])
