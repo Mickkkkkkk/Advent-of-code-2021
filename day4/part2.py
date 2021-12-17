@@ -8,7 +8,6 @@ def get_loser(inverted, board_counters, draws, boards):
     most_turns = 0
     loser = 0
     for i, count in enumerate(board_counters):
-        print(i)
         not_won = True
         turn = 0
         while not_won and turn < len(draws):
@@ -19,7 +18,6 @@ def get_loser(inverted, board_counters, draws, boards):
                     if count[0][tup[1]] == 5 or count[1][tup[2]] == 5:
                         not_won = False
                         if turn >= most_turns:
-                            print("NEW")
                             loser = i
                             most_turns = turn
             turn += 1
