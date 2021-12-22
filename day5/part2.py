@@ -1,3 +1,7 @@
+"""
+kunne brukt range x1 -> x2, y1 -> y2 bare
+"""
+
 from collections import defaultdict
 
 vent_coordinates = defaultdict(lambda:0)
